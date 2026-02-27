@@ -353,6 +353,38 @@ text-align: center;
 background-color: rgb(227, 6, 19);
 }
     </style>
+
+
+    <style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
     <center>
         
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvLa2TBDUqco_k-Gukj83Kz-pRKeLQWXYFa_NZS300N8cLO7iH6W_KoNTxYrfLRRL8QZVq8Y-J7kyMwkp7iC3NP8mPHdha7RIZGSKM5CUWpbt9OIC5VHIo4Xx1AFJFvUSsS-9DSABLSGPRZAVuSouoDDUqB90kzQKFmYyhy573tBLwae7pHxfP0MZhNqxl/s320/1000234356.jpg" alt="Free-Data" style="width: 100%;">
@@ -382,6 +414,10 @@ background-color: rgb(227, 6, 19);
             <p class="welcome">
                
 
+<body>
+    <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="https://cdn.dribbble.com/userupload/22076800/file/original-8e7ce77dec0edaf0105e8287038f6e60.gif"/>
+</div>
 
 
 
@@ -620,6 +656,11 @@ background-color: rgb(227, 6, 19);
 </script>
 
 
+<script type='text/javascript'>
+    window.addEventListener('load', function () {
+        document.querySelector('.pre-loader').className += ' hidden';
+    });
+</script>
 
 
 
