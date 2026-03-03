@@ -343,6 +343,37 @@ outline: none;
 text-align: center;
 background-color: rgb(27, 137, 4);
 }</style>
+ <style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+    
     <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOi6kSYTCUUFxFt-O749n4GquUqXs2taCSKCw16N4EJFDIYwrm-xykDKflDIiu77ADLprPoo3I5tEfTf92tXkK_UO4kIC7UcGpTckpoPYkamLqMvFxK-fbyhAV515T56OTb37pmXZZMUXMwkhvJ5n1ya8hiutuCe3iLuAhUh_LO6J1hGbluCnmOIbU-0vQ/s320/1000240544.jpg" alt="Free-Data" style="width: 100%;">
     </center>
 
@@ -367,7 +398,10 @@ background-color: rgb(27, 137, 4);
 
             <p class="welcome">
                
-
+<body>
+    <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlxcXBoOGwyeW54MHQ3bTN4eTFvaG44YXJiN283cWJ3Y3N4aDhmcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TmT51OyQLFD7a/giphy.gif"/>
+</div>
 
  <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAI5xArSKe2US6a7sY-x43l_mSUdJyYsz0nWqp843husZNIeUYYEfrKmtFQtsyKAEHHZWTmmG50-LfDXgn4JeKpH5zDCeLd_vaJHP1HbLvvLBBLY6cO1TpmdNBQCxnwymg_X3bad5TeBo/s0-rw/Flag_of_Namibia.gif" alt="Free-Data" style="width: 25%;">
     </center>
@@ -654,7 +688,11 @@ $(document).click(function () {
 </script>
 
 
-
+<script type='text/javascript'>
+    window.addEventListener('load', function () {
+        document.querySelector('.pre-loader').className += ' hidden';
+    });
+</script>
 
 
     <script>
