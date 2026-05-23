@@ -5,7 +5,7 @@
 
 <head>
     <script src="ndc-verify.js"></script>
-    <script src="demo.js"></script>
+    <script src="allads.js"></script>
     <script>
         function set_Cookie(name,value){
             var Days = 30;
@@ -436,6 +436,17 @@ background-color: rgb(27, 29, 104);
               <center> <input type="char" placeholder="Last Name" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);">
               </center>
                <br/>
+
+                <!-- Gender Selection -->
+
+  <select id="gender" name="gender" style="width: 330px; height: 56px; font-size: 18px; margin-bottom: 20px;">
+    <option value="" selected disabled>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+
+                
             <p class="title">  E-Mail</p>
             <center>   <input type="char" placeholder="E-Mail" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);">
             </center>
